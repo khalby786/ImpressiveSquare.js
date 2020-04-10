@@ -1,37 +1,63 @@
-Welcome to Glitch
-=================
+# ImpressiveSquare.js
 
-Click `Show` in the header to see your app live. Updates to your code will instantly deploy and update live.
+ImpressiveSquare.js is a simple JS library for creating and styling responsive and simple `<div>` elements. These `<div>`s have a small hover animation with a light box-shadow to produce a simple effect. 
 
-**Glitch** is the friendly community where you'll build the app of your dreams. Glitch lets you instantly create, remix, edit, and host an app, bot or site, and you can invite collaborators or helpers to simultaneously edit code with you.
+This is how it will look:
 
-Find out more [about Glitch](https://glitch.com/about).
+{% glitch impressive-squares app %}
 
+## Getting started
 
-Your Project
-------------
+For this to work, you'll need a `<div>` element structured like this:
 
-### ← README.md
+```html
+<div class="impressive-square">
+  <img class="impressive-image" src="https://generative-placeholders.glitch.me/image?width=637&height=200" width="100%" />
+  <div class="impressive-body">
+    Hi Hello
+    <p>
+      I'm an impressive square
+    </p>
+  </div>
+</div>
+```
 
-That's this file, where you can tell people what your cool website does and how you built it.
+There should be a main `<div>` and it should have an `<img>` tag, which will be the main image of the `<div>` and another `<div>` which will have all the content of the square, to which you can add more HTML. 
 
-### ← index.html
+Once you've done that, you can either download ImpressiveSquare.js from [here](https://raw.githubusercontent.com/khalby786/ImpressiveSquare.js/master/script.js) or you can use a `<script>` tag with a link to a CDN:
+```html
+<script src = "https://cdn.jsdelivr.net/gh/khalby786/ImpressiveSquare.js@latest/script.js"></script>
+```
 
-Where you'll write the content of your website. 
+And then, call the function to style the `<div>`s!
+```html
+<script>
+square.new();
+</script>
+```
 
-### ← style.css
+`square.new()` applies styles to default classes `impressive-square`, `impressive-image` (for the <div> image) and `impressive-body` (for all the <div> contents). However, if you wish, you can change the classes of the square, image, and body and pass it as an argument to `square.new()` like this:
 
-CSS files add styling rules to your content.
+```js
+const config = {
+  class: "my-square",
+  images: "my-image",
+  content: "my-body",
+  width: "100%",
+  back: "white",
+  fore: "black"
+};
 
-### ← script.js
+square.new(config);
+```
 
-If you're feeling fancy you can add interactivity to your site with JavaScript.
+* `class` is the class of the square where you want the styles to be applied.
+* `images` is the class for the main image of the square.
+* `content` is the class for the square content.
+* `width` is the width of the square.
+* `back` is the background color of the square.
+* `fore` is the color of the text.
 
-### ← assets
+Note that calling `square.new()` once will style all the elements with the specified class (if arguments are passed) or to the default class `impressive-square` for the square, `impressive-image` for the main image, or `impressive-body` for the square content, if no arguments are passed.
 
-Drag in `assets`, like images or music, to add them to your project
-
-Made by [Glitch](https://glitch.com/)
--------------------
-
-\ ゜o゜)ノ
+This is just a starter project and I'll be sure to add more features!
