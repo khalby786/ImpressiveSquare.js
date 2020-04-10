@@ -2,48 +2,70 @@
 <html lang="en">
   <head>
     <title>Impressive Squares!</title>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    
-    <link rel="stylesheet" href="/style.css">
-    
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <link rel="stylesheet" href="/style.css" />
+
     <script src="/script.js" defer></script>
-  </head>  
+  </head>
   <body>
-    
-    <div class = "impressive-square">
-      <img class = "impressive-image" src = "https://generative-placeholders.glitch.me/image?width=637&height=200" width="100%">
-      <div class = "impressive-body">
-        Hi
-        Hello
+    <div class="impressive-square">
+      <img
+        class="impressive-image"
+        src="https://generative-placeholders.glitch.me/image?width=637&height=200"
+        width="100%"
+      />
+      <div class="impressive-body">
+        Hi Hello
         <p>
           I'm an impressive square
         </p>
       </div>
     </div>
-    
-    <div class = "impressive-square">
-      <img class = "impressive-image" src = "https://generative-placeholders.glitch.me/image?width=637&height=200" width="100%">
-      <div class = "impressive-body">
-        Hi
-        Hello
+
+    <div class="impressive-square">
+      <img
+        class="impressive-image"
+        src="https://generative-placeholders.glitch.me/image?width=637&height=200"
+        width="100%"
+      />
+      <div class="impressive-body">
+        Hi Hello
         <p>
           I'm an impressive square
         </p>
       </div>
     </div>
-    
-    <div class = "impressive-square2">
-      <img class = "impressive-image2" src = "https://generative-placeholders.glitch.me/image?width=637&height=200" width="100%">
-      <div class = "impressive-body2">
-        Hi
-        Hello
+
+    <div class="impressive-square2">
+      <img
+        class="impressive-image2"
+        src="https://generative-placeholders.glitch.me/image?width=637&height=200"
+        width="100%"
+      />
+      <div class="impressive-body2">
+        Hi Hello
         <p>
           I'm an impressive square
         </p>
       </div>
     </div>
-    
+
+    <script src="https://cdn.jsdelivr.net/gh/khalby786/ImpressiveSquare.js@latest/script.js"></script>
+    <script>
+      const config = {
+        class: "impressive-square",
+        images: "impressive-image",
+        content: "impressive-body",
+        width: "47%",
+        back: "white",
+        fore: "black"
+      };
+
+      square.new();
+      square.new(config);
+    </script>
   </body>
 </html>
